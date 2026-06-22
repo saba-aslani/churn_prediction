@@ -22,7 +22,7 @@ Customer churn is one of the most costly challenges in the telecom industry. Acq
 
 ## Live Demo
 
-🔗 [Churn Intelligence Platform →](https://your-app.streamlit.app)
+🔗 [Churn Intelligence Platform →](https://churnprediction-customer.streamlit.app/)
 
 **Dashboard pages:**
 | Page | Description |
