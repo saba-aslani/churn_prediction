@@ -175,10 +175,13 @@ streamlit run app_churn.py
 
 ---
 
-## What I Learned
+## Design Decisions
 
-This project taught me that model performance is only half the story. The other half is:
-- Defining the right metric for the business problem (F2 over accuracy)
-- Communicating results in business terms ($84K ROI, not just AUC=0.851)
-- Making models explainable to non-technical stakeholders (SHAP)
-- Knowing when a simpler model is better than a complex one (LR ≈ XGBoost here)
+- **F2 over accuracy**: Missing a churner costs ~$1,200 in lost revenue; 
+  a false alarm costs ~$50. Recall must be weighted higher.
+- **LR over XGBoost**: When a simpler model matches complex ones (AUC 0.851 vs 0.850), 
+  prefer simplicity — faster inference, easier to audit, less maintenance.
+- **Threshold = 0.29 over 0.50**: Default thresholds are arbitrary. 
+  Business cost asymmetry should drive this decision, not convention.
+- **SHAP over feature importance**: Feature importance says *what* matters. 
+  SHAP says *why* — and gives retention teams actionable per-customer explanations.
