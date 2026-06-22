@@ -113,7 +113,7 @@ scoring = "roc_auc"   # accuracy excluded — misleading on imbalanced data
 Used `RandomizedSearchCV` (30 iterations per model) — better coverage vs. GridSearch at a fraction of the compute cost.
 
 ### 4. Threshold Optimization
-Default threshold of 0.5 is rarely optimal. Optimized using **F2-score** (recall-weighted) because the cost of missing a churner (~$1,200 lost revenue) exceeds the cost of a false alarm (~$50 retention offer).
+Default threshold of 0.5 is rarely optimal. Optimized using **F2-score** (recall-weighted) because the cost of missing a churner (approximately $1,200 lost revenue) exceeds the cost of a false alarm (approximately $50 retention offer).
 
 ```
 Default  (0.50): Recall=0.79, Precision=0.50
