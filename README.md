@@ -1,6 +1,6 @@
 # Telco Customer Churn Prediction Platform
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-red)](https://your-app.streamlit.app)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-red)](https://churnprediction-customer.streamlit.app/)
 [![Python](https://img.shields.io/badge/Python-3.10+-blue)](https://python.org)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 [![AUC](https://img.shields.io/badge/ROC--AUC-0.851-brightgreen)]()
@@ -76,9 +76,9 @@ churn_prediction/
 │
 ├── WA_Fn-UseC_-Telco-Customer-Churn.csv   # IBM Telco dataset (7,043 customers)
 │
-├── churn_model_telco.py                    # Week 1: Feature engineering + model comparison
+├── churn_model.py                    # Week 1: Feature engineering + model comparison
 ├── churn_tuning_v2.py                      # Week 2: Hyperparameter tuning + threshold optimization
-├── app_churn_v2.py                         # Week 3: Production Streamlit dashboard
+├── app_churn.py                         # Week 3: Production Streamlit dashboard
 │
 ├── churn_model_tuned.pkl                   # Saved model artifact with metadata
 ├── requirements.txt
