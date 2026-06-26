@@ -46,7 +46,7 @@ def load_and_clean(path: str) -> pd.DataFrame:
     log.info(f"Loading {path}")
     df = pd.read_csv(path)
 
-    # TotalCharges has 11 blank rows (new customers with tenure=0)
+    # TotalCharges blank rows (new customers with tenure=0)
     df["TotalCharges"] = pd.to_numeric(df["TotalCharges"], errors="coerce")
     blank_count = df["TotalCharges"].isna().sum()
     log.info(f"Dropping {blank_count} rows with missing TotalCharges (tenure=0 customers)")
